@@ -1,0 +1,94 @@
+@import url('fonts.css');
+.caja-contenedor{
+  background-color: white;
+  margin:auto;
+  padding-top: 20px;
+  max-width:450px;
+  padding-bottom: 1rem;
+ box-shadow: 0px 1px 10px #E0E0E0FF;
+}
+
+
+.titulo-ingreso{
+  text-align: center;
+  font:30px 'code';
+}
+
+
+.form-login{
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/*Zona de input*/
+
+form input[type=text]:required{
+  border:none;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-bottom: solid black 0.1rem;
+   width: 80%;
+  padding-right: 20.3%;
+}
+
+form input[type=text]:required:valid{
+  border-bottom: solid #60FF83FF 0.1rem;
+  background-image: url('icons/pass.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 10%;
+  outline: 0px;
+}
+
+
+
+form input[type=text]:focus:required:invalid{
+  border-bottom: solid red 0.1rem;
+  background-image: url('icons/nopass.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 10%;
+  outline: 0px;
+}
+
+
+/*Raton al pasar por el boton "Confirmar"*/
+
+#boton-confirmar{
+  font:18px 'elefante';
+  color:#F4F4F4FF;
+  border-style: none;
+  padding: 10px 44px;
+  cursor: pointer;
+  transition: 0.5s;
+  text-shadow: 0px 1px 2px black;
+  background-color: #00D074FF;
+}
+
+
+#boton-confirmar:hover{
+  background-color:#00EA69FF;
+  border-color: #0AFF90FF;
+  transition: 1s;
+}
+
+#boton-confirmar:active{
+  text-shadow: none;
+  transition: 0.1s;
+}
+
+
+@media(min-width: 760px){
+
+  form input[type=text]:focus:required:invalid{
+    background-size: 9%;
+  }
+
+  form input[type=text]:required:valid{
+  background-size: 9%;
+}
+
+
+}
+
