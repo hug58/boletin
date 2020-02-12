@@ -23,33 +23,25 @@
 }
 /*Zona de input*/
 
-form input[type=text]:required{
+#cedula,#password:required{
   border:none;
   padding: 1rem;
   margin: 1rem 0;
   border-bottom: solid black 0.1rem;
-   width: 80%;
-  padding-right: 20.3%;
+  width: 77%;
+  padding-right: 18.3%;
+  font-size: 20px;
+  outline: 0px;
 }
 
-form input[type=text]:required:valid{
+#cedula:required:valid{
   border-bottom: solid #60FF83FF 0.1rem;
-  background-image: url('icons/pass.png');
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: 10%;
-  outline: 0px;
 }
 
 
 
-form input[type=text]:focus:required:invalid{
+#cedula:focus:required:invalid{
   border-bottom: solid red 0.1rem;
-  background-image: url('icons/nopass.png');
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: 10%;
-  outline: 0px;
 }
 
 
@@ -79,16 +71,13 @@ form input[type=text]:focus:required:invalid{
 }
 
 
-@media(min-width: 760px){
 
-  form input[type=text]:focus:required:invalid{
-    background-size: 9%;
-  }
-
-  form input[type=text]:required:valid{
-  background-size: 9%;
+.mostrarpassword{
+  position: absolute;
+  margin-left: 340px;
+  width: 40px;
+  cursor: pointer;
 }
 
 
-}
 

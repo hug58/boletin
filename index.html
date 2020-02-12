@@ -10,6 +10,7 @@
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/validaringreso.js"></script>
     <script src="js/loader.js"></script>
+    <script src="js/verpass.js"></script>
 </head>
 
 <body>
@@ -30,7 +31,8 @@
 <form action="" method="get" name="formulario" class="form-login" >
 <input id="cedula" type="text"name="cedula" placeholder="&#128100; Cedula" pattern="[1234567890.]{1,900}" title="Ingrese Su Numero De Cedula" required >
 
-<input id="contraseña" autocomplete="off" type="text"name="contraseña" placeholder="&#128273; Contraseña" title="Ingrese Su Contraseña" required>
+<input id="password" autocomplete="off" type="password"name="password" placeholder="&#128273; Contraseña" title="Ingrese Su Contraseña" required> <img class="mostrarpassword" id="imgeyes" src="css/icons/eye-solid.svg"onClick="verpass()">
+
 <br><br><br>
 <input id="boton-confirmar" type="submit" name="" value="Ingresar">
 </form>
