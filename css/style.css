@@ -88,13 +88,18 @@ margin:0;
   color:#111111FF;
   font:40px 'impact';
 }
-
+#banner img{
+  position: absolute;
+  width: 80px;
+  border-radius: 45%;
+  margin-right: 2px;
+}
 #pizarra{
 text-align: center;
 }
 
 #titulo-tabla{
-  font:30px 'acme';
+  font:30px 'fira';
 }
 
 #texto{
@@ -135,50 +140,32 @@ transition: all 1.2s;
   padding-right: 20px;
 }
 
-.aux-tablero2{
-  padding-top: 25px;
-  padding-left: 39px;
-  padding-right: 39px;
+.aux-tablero-usuario{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.aux-tablero-usuarios{
+  padding-top: 3px;
+   padding-left: 22px;
+  padding-right: 22px
+}
+.aux-tablero-caja{
+   padding-top: 21px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
-
-.aux-tablero3{
-  padding-top: 30px;
+.aux-tablero-admin{
   padding-left: 40px;
-  padding-right: 48px;
-
+  padding-right: 40px;
 }
 
-.aux-tablero4{
-  padding-top: 6px;
-  padding-left: 65px;
-  padding-right: 76px;
+/*Icons tabla*/
+
+.icons{
+  width: 150px;
+  height: 100px;
 }
-
-
-
-
-/*Iconos de la tabla*/
-#as-icon{
-width: 140px;
-
-}
-
-#as2-icon{
-width: 140px;
-
-}
-
-#as3-icon{
-  width: 140px;
-
-}
-
-#as4-icon{
-  width: 140px;
-}
-
-
 
 /*Zona de Registro*/
 #titulo-registro{
@@ -195,8 +182,8 @@ text-decoration: underline;
 
 /*Barra de Navegacion*/
 #icon-casilla{
-  width: 50px;
-  border-radius: 50%;
+  width: 30px;
+  margin-left: 2px;
   position: relative;
   float: left;
 }
@@ -215,7 +202,6 @@ padding: 20px 20px;
 transform: translateX(-120%);
 transition: all 1s;
 position: absolute;
-
 z-index: 1;
 }
 

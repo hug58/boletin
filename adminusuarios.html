@@ -4,23 +4,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
-    <title>Notas de Estudiantes</title>
+    <title>Administracion de usuarios</title>
     <link rel="shortcut icon" href="" />
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.4.1.js"></script>
-  <script src="js/loader.js"></script>
-  <script src="js/exitclickbarra.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/exitclickbarra.js"></script>
 </head>
 
 <body>
+
 <div id="contenedor-carga">
     <div id="carga"></div>
     <div id="carga2"></div>
 </div>
 
-
     <header align="center">
-        <div id="icon-casilla" >
+        <div id="icon-casilla">
 
 
             <label for="casilla"><img id="icon-casilla" src="css/icons/bars-solid.svg" alt=""></label>
@@ -28,7 +28,7 @@
         <br>
         <br>
 
-        <h1 id="titulo-registro"> Notas de Estudiantes</h1>
+        <h1 id="titulo-registro"> Administracion de Usuarios</h1>
     </header>
 
     <!-- Barra de Navegacion-->
@@ -37,11 +37,9 @@
 
 
         <a id="letrasnav" href="principal.html">Pagina Principal</a>
-
         <a id="letrasnav" href="regnotas.html">Registro de Notas</a>
-        <a id="letrasnav" href="#" style="background-color: green">Ver Notas</a>
-
-      <br>
+        <a id="letrasnav" href="vernotas.html">Ver Notas</a>
+        <br>
         <br>
         <br>
         <br>
@@ -57,25 +55,28 @@
         <a id="letrasnav" href="index.html"><img id="door" src="css/icons/door-open.svg" alt="">Salir</a>
 
     </div>
-    <!-- Seccion de seleccion-->
-    <section id="pizarra">
 
-        <a href="verprimaria.html" id="enlaces">
-            <div id="tablero" class="aux-tablero">
-                <h3 id="titulo-tabla">Primaria</h3>
-                <img class="icons" src="css/icons/accessibility-24px.svg">
-                <p id="texto">Consultar Notas de Primaria</p>
+<section id="pizarra">
+
+        <a href="reguser.html" id="enlaces">
+            <div id="tablero" class="aux-tablero-usuario">
+                <h3 id="titulo-tabla">Crear <br> Usuario</h3>
+                <img class="icons" src="css/icons/user-solid.svg">
+                <p id="texto">Crear cuenta de usuario que <br> ingresara en el sistema</p>
             </div>
         </a>
 
-        <a href="verbachillerato.html" id="enlaces">
-            <div id="tablero" class="aux-tablero">
-                <h3 id="titulo-tabla">Bachillerato</h3>
-                <img class="icons" src="css/icons/dvr-24px.svg">
-                <p id="texto">Consultar Notas de Bachillerato</p>
+        <a href="#.html" id="enlaces">
+            <div id="tablero" class="aux-tablero-usuarios">
+                <h3 id="titulo-tabla">Administrar <br>Usuarios</h3>
+                <img class="icons" src="css/icons/users-solid.svg">
+                <p id="texto">Administrar usuarios<br> registrados en el sistema</p>
             </div>
         </a>
     </section>
+
+
+
 
 </body>
 

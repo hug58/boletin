@@ -17,27 +17,46 @@
     <div id="carga2"></div>
 </div>
     <header id="banner">
-        Aqui logo
+        <img src="css/icons/jb.jpg">
     </header><!-- /header -->
 
+<br><br><br>
 
+    <div class="barra">
+    <form action="" method="get" name="busqueda">
+        <input class="barra-busqueda" type="search" name="busqueda" id="barra-busqueda" placeholder="Buscar Estudiante por Cedula o Nombre" autocomplete="off"> <input class="boton-buscar" type="submit" value="Buscar" title="Buscar">
+            <select name="seleccion-busqueda" class="barra-busqueda-options">
+                <option value="cedula">C.I</option>
+                <option value="nombre">Nombre</option>
+            </select>
 
-    <h1 class="titulo">Unidad Educativa Colegio "Juan Bosco"</h1>
+    </form>
+</div>
+
+<br><br><br><br><br>
 
     <section id="pizarra">
         <a href="regnotas.html" id="enlaces">
-            <div id="tablero" class="aux-tablero3">
+            <div id="tablero" class="aux-tablero">
                 <h3 id="titulo-tabla">Registro de Notas</h3>
-                <img id="as3-icon" src="css/icons/user-edit-solid.svg">
+                <img class="icons" src="css/icons/user-edit-solid.svg">
                 <p id="texto"> Ingrese aquí para registrar <br> las notas del estudiantino</p>
             </div>
         </a>
 
         <a href="vernotas.html" id="enlaces">
-            <div id="tablero" class="aux-tablero4">
+            <div id="tablero" class="aux-tablero-caja">
                 <h3 id="titulo-tabla">Ver Notas</h3>
-                <img id="as4-icon" src="css/icons/archive-solid.svg">
+                <img class="icons"  src="css/icons/archive-solid.svg">
                 <p id="texto">Ingrese aquí para ver <br> las notas del estudiante</p>
+            </div>
+        </a>
+<br><br><br>
+         <a href="adminusuarios.html" id="enlaces">
+            <div id="tablero" class="aux-tablero-admin">
+                <h3 id="titulo-tabla">Administracion <br>de Usuarios</h3>
+                <img class="icons"  src="css/icons/cog-solid.svg">
+                <p id="texto"> Ingrese aquí para registrar <br> modificar o eliminar usuarios <br> de la plataforma</p>
             </div>
         </a>
     </section>
