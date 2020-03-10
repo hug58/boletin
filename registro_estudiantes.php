@@ -4,14 +4,14 @@
 
 	$mysqli = new mysqli($db_host,$db_usuario,$db_password,$db_nombre);
 
-	$ci = $_GET["ci"];
-	$nombres = $_GET["nombres"];
-	$apellidos = $_GET["apellidos"];
-	$anio_actual = $_GET["anio_actual"];
+	$id_ci = $_POST["id_ci"];
+	$nombres = $_POST["nombres"];
+	$apellidos = $_POST["apellidos"];
+	$anio_actual = $_POST["anio_actual"];
 
 
 
-	$query = "INSERT INTO estudiante (`ci`, `nombres`, `apellidos`, `anio_actual`) VALUES ('$ci','$nombres','$apellidos','$anio_actual')";
+	$query = "INSERT INTO estudiante (`id_ci`, `nombres`, `apellidos`, `anio_actual`) VALUES ('$id_ci','$nombres','$apellidos','$anio_actual')";
 
 
 	$resultado = $mysqli->query($query);
@@ -26,6 +26,5 @@
 
 
 	$mysqli->close()
-
 
 ?>

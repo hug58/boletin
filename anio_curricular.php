@@ -1,19 +1,11 @@
-<?php 
+<?php
 
 	require('datos_conexion.php');
 	$mysqli = new mysqli($db_host,$db_usuario,$db_password,$db_nombre);
+	mysqli_set_charset($mysqli,"utf-8");
 
-
-	$salida = "";
-	$query = "SELECT * FROM estudiante";
-
-	if (isset($_POST['consulta'])) {
-		# code...
-		$q = $mysqli -> real_escape_string($_POST['consulta']);
-		$query =  "SELECT * FROM ESTUDIANTE WHERE id_ci  LIKE '%$q%'  OR nombres LIKE '%$q%' ";  
-
-
-	}
+	$estudiante = $_GET['id_ci'];	
+	$query = "SELECT * FROM UNIDAD_CURRICULAR WHERE id_ci= '$estudiante'";
 
 
 	$resultado = $mysqli -> query($query);
@@ -27,10 +19,8 @@
 			$salida .= "<table class = 'tabla_datos' >
 						<thead>
 							<tr>
-								<td> CI </td>
-								<td> Nombres </td>
-								<td> Apeliidos </td>
 								<td> Año </td>
+								<td> Seccion </td>
 						</thead>
 						<tbody>
 			";		
@@ -40,11 +30,9 @@
 				$salida .= "
 					<tr>
 					<td> 
-						<a href=historial_academico.php?id_ci=".$fila['id_ci'].">".$fila['id_ci']."</a>
+						<a href=show_materias.php?anio=".$fila['anio'].">".$fila['anio']."</a>
 					</td>
-					<td>".$fila['nombres']."</td>
-					<td>".$fila['apellidos']."</td>
-					<td>".$fila['anio_actual']."</td>
+					<td>".$fila['seccion']."</td>
 					</tr>
 				"; 
 			}
@@ -60,6 +48,6 @@
 
 	}
 
-	$mysqli -> close();
+	$mysqli -> close();					
 
- ?>
+?>
