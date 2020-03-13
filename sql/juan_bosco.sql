@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 10-03-2020 a las 06:06:10
+-- Tiempo de generación: 13-03-2020 a las 10:30:44
 -- Versión del servidor: 5.7.26
 -- Versión de PHP: 7.2.18
 
@@ -57,19 +57,22 @@ CREATE TABLE IF NOT EXISTS `materia` (
   `id_curricular` int(11) NOT NULL,
   `id_materia` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) COLLATE utf8_bin NOT NULL,
-  `nota` int(11) NOT NULL,
-  `lapso` int(11) NOT NULL,
+  `nota_1` int(11) NOT NULL DEFAULT '0',
+  `nota_2` int(11) NOT NULL DEFAULT '0',
+  `nota_3` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_materia`),
   KEY `id_curricular` (`id_curricular`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Volcado de datos para la tabla `materia`
 --
 
-INSERT INTO `materia` (`id_curricular`, `id_materia`, `nombre`, `nota`, `lapso`) VALUES
-(1, 1, 'Programación', 20, 1),
-(2, 2, 'Idiomas', 16, 3);
+INSERT INTO `materia` (`id_curricular`, `id_materia`, `nombre`, `nota_1`, `nota_2`, `nota_3`) VALUES
+(1, 1, 'Programación', 20, 20, 20),
+(2, 2, 'Idiomas', 16, 3, 0),
+(1, 3, 'Redes', 18, 0, 0),
+(1, 4, 'Física ', 17, 0, 0);
 
 -- --------------------------------------------------------
 
