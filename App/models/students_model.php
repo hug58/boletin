@@ -78,6 +78,7 @@
 	
 		}
 
+
 	}
 
 	
@@ -88,6 +89,12 @@
 			parent::__construct('UNIDAD_CURRICULAR');
 		}
 
+	}
+
+	class Subject extends BaseModel{
+		function __construct(){
+			parent::__construct('MATERIA');
+		}
 	}
 
 

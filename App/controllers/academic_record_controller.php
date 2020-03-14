@@ -7,6 +7,10 @@
 		$info_estudiante = new Student();	
 		$info_estudiante = $info_estudiante->get_by("id_ci",$estudiante);
 	
+
+		$historial_academico = new SubjectMatter();
+		$historial_academico = $historial_academico ->get_by('id_ci',$estudiante);
+
 		require_once("views/academic_records_views.php");
 
 	}else{

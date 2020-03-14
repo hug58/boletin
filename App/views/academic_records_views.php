@@ -18,10 +18,50 @@
 				echo $salida;
 			}
 
+			$salida = "";
+
 		?>
 
 
 	</div>
+
+	<div id="datos">
+
+		<?php  
+
+			$salida .= "<table class = 'tabla_datos' >
+							<thead>
+								<tr>
+									<td> Año </td>
+									<td> Seccion </td>
+							</thead>
+							<tbody>
+				";		
+
+
+				foreach ($historial_academico as $fila) {
+
+
+					$salida .= "
+						<tr>
+						<td> 
+							<a href=mostrar_materias.php?anio=".$fila['anio'].">".$fila['anio']."</a>
+						</td>
+						<td>".$fila['seccion']."</td>
+						</tr>
+					"; 
+				}
+
+			$salida.= '</tbody></table>';
+
+			echo $salida;
+
+
+
+		?>
+
+		
+	</div>	
 
 
 </body>
