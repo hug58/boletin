@@ -1,6 +1,5 @@
-
-
 <?php  
+	header("Content-Type: text/html;charset=utf-8");
 
 	$salida = "";
 
@@ -20,13 +19,17 @@
 
 		foreach ($busqueda as $es) {
 			# $es es el estudiante
+
+			$nombres = utf8_encode($es['nombres']);
+			$apellidos = utf8_encode($es['apellidos']);
+
 			$salida .= "
 				<tr>
 				<td> 
-					<a href=historial_academico.php?id_ci=".$es['id_ci'].">".$es['id_ci']."</a>
+					<a href=index?page=historial_academico&id_ci=".$es['id_ci'].">".$es['id_ci']."</a>
 				</td>
-				<td>".$es['nombres']."</td>
-				<td>".$es['apellidos']."</td>
+				<td>".$nombres."</td>
+				<td>".$apellidos."</td>
 				<td>".$es['anio_actual']."</td>
 				</tr>
 			"; 

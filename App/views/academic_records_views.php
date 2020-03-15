@@ -13,7 +13,11 @@
 
 			foreach ($info_estudiante as $fila) {
 		
-				$salida = "<h3>".$fila['nombres']." ".$fila['apellidos']."<h3>";
+				$nombres = utf8_encode($fila['nombres']);
+				$apellidos = utf8_encode($fila['apellidos']);
+
+
+				$salida = "<h3>".$nombres." ".$apellidos."<h3>";
 				$salida .= "<h4> CI: ".$fila['id_ci']."   Año actual: ".$fila['anio_actual']."</h4>";
 				echo $salida;
 			}
@@ -45,7 +49,7 @@
 					$salida .= "
 						<tr>
 						<td> 
-							<a href=mostrar_materias.php?anio=".$fila['anio'].">".$fila['anio']."</a>
+							<a href=index?page=mostrar_materias&anio=".$fila['anio'].">".$fila['anio']."</a>
 						</td>
 						<td>".$fila['seccion']."</td>
 						</tr>

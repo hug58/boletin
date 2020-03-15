@@ -41,7 +41,7 @@
 
 				$salida .= "
 					<tr>
-					<td>".$fila['nombre']."</td>
+					<td>".utf8_encode($fila['nombre'])."</td>
 					<td>".$fila['nota_1']."</td>
 					<td>".$fila['nota_2']."</td>
 					<td>".$fila['nota_3']."</td>
