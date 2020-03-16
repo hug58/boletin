@@ -4,7 +4,7 @@
 		require_once('../models/conexion.php');
 	}
 	else{
-		require_once('models/conexion.php');
+		require_once('App/models/conexion.php');
 	}
 
 	class BaseModel {

@@ -9,10 +9,6 @@
   --gray-color:#DCDCDC;
 
 
-  /*-------BTN SUCCESS---- */
-  --button-succes-color:#F4F4F4FF;
-  --button-danger-color:#F4F4F4FF;
-
 
   /*-------COLOR-TITLE---- */
   --color-title:#38aca0;
@@ -74,3 +70,22 @@ thead{
 	color: var(--white-color);
 }
 
+
+
+ /* ----------BUTTONS--------------- */
+
+.btn{
+  border:none;
+  background-color: var(--blue-color);
+  padding: 10px;
+  margin-bottom:1%; 
+}
+
+.btn:hover{
+  color: var(--black-color);
+}
+
+.succes{
+  background-color: var(--green-color);
+  color: var(--white-color);
+}

@@ -3,7 +3,9 @@
 <head>
 	<title>Historial Academico </title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
 </head>
 <body>
 
@@ -31,6 +33,10 @@
 
 	<div id="datos">
 
+		<div class="tabla_datos">
+			<button class="btn succes">Nuevo año</button>	
+		</div>
+
 		<?php  
 
 			$salida .= "<table class = 'tabla_datos' >
@@ -38,6 +44,7 @@
 								<tr>
 									<td> Año </td>
 									<td> Seccion </td>
+									<td> Opciones </td>
 							</thead>
 							<tbody>
 				";		
@@ -52,6 +59,10 @@
 							<a href=index?page=mostrar_materias&anio=".$fila['anio'].">".$fila['anio']."</a>
 						</td>
 						<td>".$fila['seccion']."</td>
+
+
+						<td>"."Editar"."</td>
+
 						</tr>
 					"; 
 				}
@@ -69,4 +80,5 @@
 
 
 </body>
+
 </html>

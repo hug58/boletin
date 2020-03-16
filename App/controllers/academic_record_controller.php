@@ -1,6 +1,6 @@
 <?php
 
-	require_once("models/students_model.php");
+	require_once("App/models/students_model.php");
 
 	if (isset($_GET['id_ci'])) {
 		$estudiante = $_GET['id_ci'];
@@ -11,7 +11,7 @@
 		$historial_academico = new SubjectMatter();
 		$historial_academico = $historial_academico ->get_by('id_ci',$estudiante);
 
-		require_once("views/academic_records_views.php");
+		require_once("App/views/academic_records_views.php");
 
 	}else{
 		echo "Estudiante no encontrado";
