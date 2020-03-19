@@ -1,16 +1,36 @@
+
+<div class="tabla_datos">
+
+<?php  
+
+	$salida = "";
+	
+
+	$salida = "<button class= 'btn succes' >"."
+	<a href= index?page=nuevos_estudiantes> Añadir Estudiante/s</a> </button> ";
+
+	echo $salida;
+	$salida = "";
+
+?>
+
+	
+</div>
+
+
 <?php  
 	header("Content-Type: text/html;charset=utf-8");
 
-	$salida = "";
 
 	if ($busqueda) {
+
 
 		$salida .= "<table class = 'tabla_datos' >
 						<thead>
 							<tr>
 								<td> CI </td>
 								<td> Nombres </td>
-								<td> Apeliidos </td>
+								<td> Apellido </td>
 								<td> Año </td>
 						</thead>
 						<tbody>

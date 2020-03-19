@@ -24,29 +24,80 @@
 	
 
 
-
 body{
-	background-color: #FCF4EC;
+	background-color: var(--white-color);
 	font-family: 'Poppins', sans-serif;
 }
 
-.form{
-	text-align: center;
+
+/* --------FORMULARIOS ----------------- */
+
+input,button{
+  height: 35px;
+  border-radius: 24px;
+  outline: none;
+
+}
+
+.box input, .box button{
+  width: 100%;
+
+}
+
+.box form input{
+  display: block;
+  margin: 20px auto;
+  border:0px;
+  text-align: center;
+  background: none;
+  border: 2px solid var(--blue-color);
+  
+  outline: none;
+}
+
+.box{
+  width: 400px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: solid 1px var(--gray-color);
+  text-align: center;
+}
+
+.box  button{
+  border:none;
+  color: var(--blue-color);
+  background-color: var(--gray-color);
+}
+
+.box  button:hover{
+  background-color: var(--blue-color);
+  color: var(--white-color);
 }
 
 
-.form input{
-	width: 40%;
-	height: 40px;
-	border: solid 1px black;
-
- 	border: 1px dotted #999;
-  	border-radius: 0;
-
-  -webkit-appearance: none;
+/* --------H2----------------- */
 
 
+
+h1,h2,h3,h4{
+  text-transform: uppercase;
+  font-weight: 500;
 }
+
+/* --------END H2 ----------------- */
+
+
+/*
+form input, form textarea{
+display: block;    
+} 
+*/
+
+/* --------TABLAS ----------------- */
+
 
 .tabla_datos{
 	margin: auto;
@@ -70,9 +121,13 @@ thead{
 	color: var(--white-color);
 }
 
+a{
+  text-decoration: none;
+
+}
 
 
- /* ----------BUTTONS--------------- */
+ /* ------------BUTTONS--------------- */
 
 .btn{
   border:none;
@@ -86,6 +141,28 @@ thead{
 }
 
 .succes{
-  background-color: var(--green-color);
+  background-color: var(--gray-color);
   color: var(--white-color);
+}
+
+
+
+ /* ----------SEARCH--------------- */
+
+.search{
+  text-align: center;
+}
+
+
+.search input{
+  width: 40%;
+  height: 40px;
+  border: solid 1px black;
+
+  border: 1px dotted #999;
+    border-radius: 0;
+
+  -webkit-appearance: none;
+
+
 }

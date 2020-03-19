@@ -1,6 +1,6 @@
 <?php  
 	
-	require_once("App/models/students_model.php");
+	require_once("App/models/subject_matter_model.php");
 
 	if (isset($_GET["anio"])) {
 
