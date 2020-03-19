@@ -1,9 +1,10 @@
 @import url('fonts.css');
 @import url('formulario.css');
 @import url('subirvernotas.css');
+@import url('login.css');
 body{
  background-color: #f3f3f3;
-margin:0;
+ margin:0;
 }
 /*Animacion de Carga*/
 #contenedor-carga{
@@ -88,18 +89,19 @@ margin:0;
   color:#111111FF;
   font:40px 'impact';
 }
-
-#Pizarra{
+#banner img{
+  position: absolute;
+  width: 76px;
+  height: 70px;
+  border-radius: 100%;
+  margin-right: 2px;
+}
+#pizarra{
 text-align: center;
 }
 
-#Pizarra2{
-  text-align: center;
-
-}
-
 #titulo-tabla{
-  font:30px 'acme';
+  font:30px 'fira';
 }
 
 #texto{
@@ -111,7 +113,7 @@ text-align: center;
 display: inline-block;
 border-style:solid;
 color: black;
-margin: 30px 50px;
+margin: 30px 20px;
 background-color: white;
 text-align: center;
 transform: translateY(0%);
@@ -122,7 +124,7 @@ text-decoration: none;
 #tablero:hover{
 background-color: #FEC156FF;
 transform: translateY(-10%);
-transition: all 1.2s;
+transition: all 0.6s;
 }
 
 #tablero:active{
@@ -135,75 +137,69 @@ transition: all 1.2s;
 }
 /*Auxiliar padding tableros*/
 .aux-tablero{
-   padding-top: 20px;
+   padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.aux-tablero-usuario{
   padding-left: 20px;
   padding-right: 20px;
 }
-
-.aux-tablero2{
-  padding-top: 25px;
-  padding-left: 39px;
-  padding-right: 39px;
+.aux-tablero-usuarios{
+  padding-top: 3px;
+   padding-left: 22px;
+  padding-right: 22px
+}
+.aux-tablero-caja{
+   padding-top: 13px;
+  padding-left: 54px;
+  padding-right: 54px;
 }
 
-
-.aux-tablero3{
-  padding-top: 30px;
-  padding-left: 40px;
-  padding-right: 48px;
-
+.aux-tablero-admin{
+  padding-left: 29px;
+  padding-right: 29px;
 }
 
-.aux-tablero4{
-  padding-top: 6px;
-  padding-left: 65px;
-  padding-right: 76px;
+/*Icons tabla*/
+
+.icons{
+  width: 130px;
+  height: 80px;
 }
 
-
-
-
-/*Iconos de la tabla*/
-#as-icon{
-width: 140px;
-
+.icons-admin{
+  width: 100px;
+  height: 59px;
 }
 
-#as2-icon{
-width: 140px;
+/*Cerrar Sesion*/
+.cerra-sesion{
+  float: right;
 
 }
-
-#as3-icon{
-  width: 140px;
-
-}
-
-#as4-icon{
-  width: 140px;
-}
-
-
 
 /*Zona de Registro*/
 #titulo-registro{
 text-align:center;
-font: 40px 'impact';
-text-decoration: underline;
+font: 40px 'lato';
+
 }
 
 /*Registro de Notas*/
 #titulo-inferior{
   text-align: center;
-  color: black;
+background-color: black;
 }
 
 /*Barra de Navegacion*/
 #icon-casilla{
-  width: 50px;
-  border-radius: 50%;
-  position: relative;
+  width: 30px;
+  margin-left: 2px;
+  position: absolute;
   float: left;
+  top: 0;
 }
 
 label{
@@ -220,7 +216,6 @@ padding: 20px 20px;
 transform: translateX(-120%);
 transition: all 1s;
 position: absolute;
-
 z-index: 1;
 }
 
@@ -232,14 +227,16 @@ transition: all 0.5s;
 
 
 
-#letrasnav{
+#letrasnav,.section-close{
   text-align: center;
   color: white;
   text-decoration: none;
   padding: 20px 20px;
   font:16px 'robotoslab';
 }
-
+.section-close{
+  color: black;
+}
 #letrasnav:hover{
   background-color: #4FC2EDFF;
   transition: all 0.4s;

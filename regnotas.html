@@ -5,28 +5,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
     <title>Registro de Notas</title>
-    <link rel="shortcut icon" href=""/>
+    <link rel="shortcut icon" href="" />
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery-3.4.1.js"></script>
     <script src="js/loader.js"></script>
-    <script src="js/exitclickbarra.js"></script>
+    <script src="js/exitclickbar.js"></script>
 </head>
 
 <body>
 
-<div id="contenedor-carga">
-    <div id="carga"></div>
-    <div id="carga2"></div>
-</div>
+    <div id="contenedor-carga">
+        <div id="carga"></div>
+        <div id="carga2"></div>
+    </div>
 
-    <header align="center">
-        <div class="bounce" id="icon-casilla">
+    <header onClick="uncheck()" align="center">
 
-
-            <label for="casilla"><img id="icon-casilla" src="css/banner/iconesa.ico" alt=""></label>
+        <div onClick="uncheck()">
+            <br><br>
         </div>
-        <br>
-        <br>
 
         <h1 id="titulo-registro"> Registro de Notas</h1>
     </header>
@@ -36,50 +32,77 @@
     <div id="recuadro">
 
 
-        <a id="letrasnav" href="index.html">Pagina Principal</a>
-
-        <a id="letrasnav" href="ingreso.html">Ingreso</a>
-
-        <a id="letrasnav" href="registro.html">Registro</a>
+        <a id="letrasnav" href="logged.html">Pagina Principal</a>
 
         <a id="letrasnav" href="#" style="background-color: green; text-shadow: 0px 1px 1px black;">Registro de Notas</a>
-        <a id="letrasnav" href="vernotas.html">Ver Notas</a>
+        <a id="letrasnav" href="consultarnotas.html">Ver Notas</a>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <a id="letrasnav" href="#"> <img id="door" src="css/icons/door-open.svg" alt="">Salir</a>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <a id="letrasnav" href="index.html"> <img id="door" src="css/icons/door-open.svg" alt="">Salir</a>
 
     </div>
 
-    <h2 id="titulo-inferior">Elija en cual sección quiere Registrar notas</h2>
-<!-- Tablero de Selección-->
-    <section id="Pizarra">
 
-        <a href="primaria.html" id="enlaces">
-            <div id="tablero" class="aux-tablero">
-                <h3 id="titulo-tabla">Primaria</h3>
-                <img id="as-icon" src="css/icons/accessibility-24px.svg">
-                <p id="texto">Agregar Notas de Primaria</p>
+    <div id="icon-casilla">
+        <label for="casilla"><img id="icon-casilla" src="css/icons/bars-solid.svg" alt=""></label>
+    </div>
+
+    <br><br><br>
+
+    <!-- Registro estudiante-->
+    <div class="registro_estudiante">
+
+        <form action="registro_estudiantes.php" method="GET">
+
+            <div class="form_student">
+
+
+
+                <label for="ci">Cedula</label>
+                <input type="text" name="ci" class="reg-student" id="ci" pattern="[veVE0123456789.-]{1,999}" title="Ingrese la cedula!" autocomplete="off" required>
+
+
+
+                <label for="nombres">Nombre</label>
+                <input type="text" name="nombres" id="nombres" class="reg-student" pattern="[A-Za-záéíóúñ ]{1,900}" title="Solo caracteres alfabeticos" autocomplete="off" required>
+
+
+
+                <label for="apellidos">Apellidos</label>
+                <input type="text" name="apellidos" id="apellidos" class="reg-student" pattern="[A-Za-záéíóúñ ]{1,900}" title="Solo caracteres alfabeticos" autocomplete="off" required>
+
+
+
+
+                <label for="anio_actual">Año cursante</label>
+                <select name="anio_actual" id="anio_actual" required>
+                    <option value="1-A">1-A</option>
+                    <option value="1-B">1-B</option>
+                    <option value="2-A">2-A</option>
+                    <option value="2-B">2-B</option>
+                    <option value="3-A">3-A</option>
+                    <option value="3-B">3-B</option>
+                    <option value="4-A">4-A</option>
+                    <option value="4-B">4-B</option>
+                    <option value="5-A">5-A</option>
+                    <option value="5-B">5-B</option>
+
+                </select>
+
             </div>
-        </a>
 
-        <a href="bachillerato.html" id="enlaces">
-            <div id="tablero" class="aux-tablero2">
-                <h3 id="titulo-tabla">Bachillerato</h3>
-                <img id="as2-icon" src="css/icons/dvr-24px.svg">
-                <p id="texto">Agregar Notas de Bachillerato</p>
+
+
+            <div class="button">
+                <input id="boton-confirmar" type="submit" value="Registrar">
             </div>
-        </a>
+
+        </form>
 
 
-    </section>
+    </div>
+
+
 
 </body>
 

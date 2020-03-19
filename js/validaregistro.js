@@ -1,7 +1,7 @@
 function comenzar(){
 var nombre=document.getElementById("nombre");
 var apellido=document.getElementById("apellido");
-var cedula=document.getElementById("cedula");
+var cedulaid=document.getElementById("cedulaid");
 var contraseña=document.getElementById("contraseña");
 var ccontraseña=document.getElementById("ccontraseña");
 
@@ -9,8 +9,7 @@ var ccontraseña=document.getElementById("ccontraseña");
 
 nombre.addEventListener("input",validar,false);
 apellido.addEventListener("input",validar,false);
-cedula.addEventListener("input",validar,false);
-
+cedulaid.addEventListener("input",validar,false);
 contraseña.addEventListener("input",validar,false);
 ccontraseña.addEventListener("input",validar,false);
      validar();
@@ -34,12 +33,12 @@ function validar(){
    }
 
 
-   if (cedula.value==""){
-    cedula.setCustomValidity("Introduzca su cedula!");
+   if (cedulaid.value==""){
+    cedulaid.setCustomValidity("Introduzca su cedula!");
    }
 
    else{
-    cedula.setCustomValidity("");
+    cedulaid.setCustomValidity("");
    }
 
 

@@ -4,12 +4,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
-    <title>Registro de Notas/Primaria</title>
+    <title>Consulta de Notas</title>
     <link rel="shortcut icon" href="" />
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery-3.4.1.js"></script>
     <script src="js/loader.js"></script>
-    <script src="js/exitclickbarra.js"></script>
+    <script src="js/exitclickbar.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+          integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/buscar.js"></script>
 </head>
 
 <body>
@@ -19,54 +24,54 @@
         <div id="carga2"></div>
     </div>
 
+    <header onClick="uncheck()" align="center">
 
-
-    <header align="center">
-        <div id="icon-casilla">
-
-
-            <label for="casilla"><img id="icon-casilla" src="css/banner/iconesa.ico" alt=""></label>
-        </div>
         <br>
         <br>
-        <h1 id="titulo-registro">Primaria</h1>
+
+        <h1 id="titulo-registro"> Consulta de Notas</h1>
     </header>
 
-    <!-- Barra de Navegación-->
+    <!-- Barra de Navegacion-->
     <input type="checkbox" id="casilla" style="display:none;">
     <div id="recuadro">
 
 
-        <a id="letrasnav" href="index.html">Pagina Principal</a>
+        <a id="letrasnav" href="logged.html">Pagina Principal</a>
 
-        <a id="letrasnav" href="ingreso.html">Ingreso</a>
-
-        <a id="letrasnav" href="registro.html">Registro</a>
 
         <a id="letrasnav" href="regnotas.html">Registro de Notas</a>
-        <a id="letrasnav" href="vernotas.html">Ver Notas</a>
+        <a id="letrasnav" style="background-color: green;" href="#">Consultar Notas</a>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <a id="letrasnav" href="index.html"><img id="door" src="css/icons/door-open.svg" alt="">Salir</a>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <a id="letrasnav" href="#"><img id="door" src="css/icons/door-open.svg" alt="">Salir</a>
 
     </div>
 
+    <div id="icon-casilla">
+        <label for="casilla"><img id="icon-casilla" src="css/icons/bars-solid.svg" alt=""></label>
+    </div>
+
+<!--Consulta de Notas-->
+
+    <div class="barra" onClick="uncheck()">
+        <section class="principal">
+            <div class="form-1-2">
+                <input class="barra-busqueda" type="text" name="caja_busqueda" id="caja_busqueda" placeholder="Buscar Estudiante por Cedula o Nombre" autocomplete="off">
+            </div>
+
+            <div id="datos">
+
+            </div>
+
+        </section>
+    </div>
 
 
-    <h2 id="titulo-inferior">Elija en cual sección quiere Registrar notas</h2>
-    <!-- Tabla de Selección-->
-    <section id="Pizarra">
+    <section onClick="uncheck()" id="pizarra">
 
         <div id="primaria-principal">
-            <a id="seleccion-click" href="registrarnotas.html">
+            <a id="seleccion-click" href="1">
                 <div id="seleccion-click1">
                     <p>Primero A</p>
                 </div>
@@ -135,18 +140,7 @@
             </a>
         </div>
 
-        <div id="primaria-principal">
-            <a id="seleccion-click" href="1">
-                <div id="seleccion-click1">
-                    <p>Sexto A</p>
-                </div>
-            </a>
-            <a id="seleccion-click" href="2">
-                <div id="seleccion-click1">
-                    <p>Sexto B</p>
-                </div>
-            </a>
-        </div>
+
     </section>
 
 </body>
