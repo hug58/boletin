@@ -35,19 +35,17 @@
 
 	<div id="datos">
 
-		<div class="tabla_datos">
-			<?php  
-			
-
-				$salida = "<button class= 'btn succes' >"."
-					<a href= index?page=nuevo_curricular&id_ci=".$id_ci."> Nuevo año/s</a> </button> ";
-		
-				echo $salida;
-				$salida = "";
-			?>	
+		<div class="tabla_datos">  
+			<a href= index?page=nuevo_curricular&id_ci=<?php echo $id_ci?>>
+				<button class= 'btn succes' >
+					Nuevo año/s 
+				</button> 
+			</a>
 		</div>
 
 		<?php  
+
+			$salida = "";			
 
 			$salida .= "<table class = 'tabla_datos' >
 							<thead>

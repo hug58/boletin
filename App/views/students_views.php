@@ -1,26 +1,36 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Estudiantes</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+
+	<section class="principal">
+
+
+
 <div class="tabla_datos">
 
-<?php  
+	<a href= index?page=nuevos_estudiantes> <button class= 'btn succes' > Añadir Estudiante/s </button> 
+	</a> 
 
-	$salida = "";
-	
+	<a href= index?page=buscar_estudiante> <button class= 'btn succes' > Buscar </button> 
+	</a>
 
-	$salida = "<button class= 'btn succes' >"."
-	<a href= index?page=nuevos_estudiantes> Añadir Estudiante/s</a> </button> ";
-
-	echo $salida;
-	$salida = "";
-
-?>
-
-	
 </div>
 
 
-<?php  
-	header("Content-Type: text/html;charset=utf-8");
+	<?php  
+		header("Content-Type: text/html;charset=utf-8");
 
+
+	$salida = "";
 
 	if ($busqueda) {
 
@@ -60,10 +70,20 @@
 
 
 	}else{
-		$salida .= "No hay datos :/";
+		$salida .= "<h3 style= 'text-align:center;'> Estudiante no encontrado &#128517 </h3>";
 	}
 
 	echo $salida;
 
-?>
+		?>
+
+			
+		</div>		
+
+	</section>
+
+
+
+</body>
+</html>
 

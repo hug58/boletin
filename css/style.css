@@ -7,7 +7,7 @@
   --white-color: #FCF4EC;
   --blue-color:#497198;
   --gray-color:#DCDCDC;
-
+  --pink-color:#FCB4CC;
 
 
   /*-------COLOR-TITLE---- */
@@ -82,7 +82,7 @@ input,button{
 
 
 
-h1,h2,h3,h4{
+h1,h2{
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -117,7 +117,8 @@ th, td {
 
 
 thead{
-	background-color: #497198;
+	background-color: var(--blue-color);
+  border: solid 2px #3c5c7b;
 	color: var(--white-color);
 }
 
@@ -142,10 +143,15 @@ a{
 
 .succes{
   background-color: var(--gray-color);
-  color: var(--white-color);
+}
+.danger{
+  background-color: var(--pink-color);
 }
 
+.danger a{
+  color: var(--white-color);
 
+}
 
  /* ----------SEARCH--------------- */
 

@@ -7,6 +7,12 @@
 </head>
 <body>
 
+	<div class="tabla_datos">
+		<button class="btn danger">
+			<a href="index">Regresar</a>
+		</button>	
+	</div>
+
 	<?php  
 
 		$salida = "";
@@ -25,7 +31,7 @@
 
 
 
-		foreach ($students as $fila) {
+		foreach ($result as $fila) {
 
 			$salida .= "
 			<tr>
