@@ -1,27 +1,4 @@
 @font-face{
-  font-family: 'code';
-src: url('fonts/CODE Bold.otf');
+  font-family: 'roboto';
+  src:url(fonts/Roboto-Regular.ttf);
 }
-
-@font-face{
-font-family: 'cabin';
-src: url('fonts/Cabin-Regular.ttf');
-}
-
-@font-face{
-font-family: 'fira';
-src: url('fonts/FiraSans-Bold.ttf');
-}
-
-@font-face{
-font-family: 'robotoslab';
-src: url('fonts/RobotoSlab-Bold.ttf');
-}
-
-
-@font-face{
-  font-family: 'lato';
-  src:url('fonts/Lato.ttf');
-}
-
-
