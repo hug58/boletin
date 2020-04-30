@@ -39,14 +39,7 @@
     margin-left: auto;
     width: 400px;
     text-align: center;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     padding: 1em;
 
@@ -62,18 +55,12 @@
     border-bottom-width: 2px;
     border-bottom-color: #231f1f;
     outline: none;
-    -webkit-box-shadow: none;
     box-shadow: none;
-    -webkit-transition: all 0.5s;
-    -o-transition: all 0.5s;
     transition: all 0.5s;
 }
 
       .form-reg input[type="text"]:focus {
-       border-bottom-color: #03a9f4;
-      -webkit-transition: all 0.5s;
-      -o-transition: all 0.5s;
-      transition: all 0.5s;
+       transition: all 0.5s;
    }
 
 
