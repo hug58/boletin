@@ -13,41 +13,34 @@
 		</button>	
 	</div>
 
-	<?php  
+	<table class="tabla_datos">
+			<thead>
+				<tr>
+					<td> ID </td>
+					<td> CI </td>
+					<td> Nombres </td>
+					<td> Apellido </td>
+					<td> Año </td>
+			</thead>
+			<tbody>	
 
-		$salida = "";
+			<?php foreach ($result as $fila): ?>
 
-		$salida .= "<table class = 'tabla_datos' >
-						<thead>
-							<tr>
-								<td> CI </td>
-								<td> Nombres </td>
-								<td> Apellidos </td>
-								<td> Año </td>
-						</thead>
-						<tbody>
-			";			
+				<tr>
+					<td> 
 
+					<a href=index?page=historial_academico&id=<?php echo $fila["id_estudiante"]; ?> > <?php echo $fila["id_estudiante"]; ?>  </a></td>
+					<td><?php echo $fila['ci']; ?></td>
+					<td><?php echo utf8_encode($fila['nombres']); ?></td>
+					<td><?php echo utf8_encode($fila['apellidos']); ?></td>
+					<td><?php echo $fila["anio_actual"]; ?></td>
+				</tr>
+					 
 
-
-
-		foreach ($result as $fila) {
-
-			$salida .= "
-			<tr>
-				<td>".$fila['id_ci']."</td>
-				<td>".utf8_encode($fila['nombres'])."</td>
-				<td>".utf8_encode($fila['apellidos'])."</td>
-				<td>".$fila['anio_actual']."</td>
-			</tr>"; 
-					
-		}
-
-		$salida.= '</tbody></table>';
-
-		echo $salida;
-
-	?>
+			<?php endforeach ?>	
+			
+			</tbody>
+	</table>
 
 
 </body>

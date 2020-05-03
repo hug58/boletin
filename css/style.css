@@ -3,11 +3,18 @@
 
 :root{
   /* ----------COLORES------- */
-  --green-color:#288279;
   --white-color: #FCF4EC;
-  --blue-color:#497198;
+  --blue-color:#007bff;
   --gray-color:#DCDCDC;
-  --pink-color:#FCB4CC;
+  
+
+
+  /*-------BORDER COLORS---- */
+  --blue-border:#007bff;
+
+
+  /*-------RED GET BACK---- */
+  --getback-color:#FC7C74;
 
 
   /*-------COLOR-TITLE---- */
@@ -118,7 +125,7 @@ th, td {
 
 thead{
 	background-color: var(--blue-color);
-  border: solid 2px #3c5c7b;
+  border: solid 2px var(--blue-border));
 	color: var(--white-color);
 }
 
@@ -145,7 +152,12 @@ a{
   background-color: var(--gray-color);
 }
 .danger{
-  background-color: var(--pink-color);
+  background-color: var
+
+
+  (
+  /*-------RED GET BACK---- */
+    --getback-color);
 }
 
 .danger a{

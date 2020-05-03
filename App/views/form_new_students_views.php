@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Registro de estudiantes</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<meta charset="utf-8">
-</head>
-
 
 <body>
 
@@ -18,7 +12,7 @@
 				
 				<form  method="POST">
 
-					<input type="number" name="id_ci" id="id_ci" placeholder="CI" required="">
+					<input type="number" name="ci" id="ci" placeholder="CI" required="">
 					
 					<input type="text" name="nombres" id="nombres" placeholder="Nombres" required="">
 
@@ -30,7 +24,7 @@
 
 				</form>
 
-				<p> <a href="" style="color: var(--blue-color);"> Subir estudiantes por un archivo csv </a></p>
+				<p> <a href="index.php?page=csv_estudiante" style="color: var(--blue-color);"> Subir estudiantes por un archivo csv </a></p>
 
 			</div>
 

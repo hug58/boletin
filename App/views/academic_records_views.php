@@ -1,87 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Historial Academico </title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
 
-
-</head>
 <body>
 
 	<div class="search">
+
+		<h3> <?php echo $estudiante[0]["nombres"]." ".$estudiante[0]["apellidos"] ?></h3>
+		<h4> CI: <?php echo $estudiante[0]["ci"] ."   Año actual: ". $estudiante[0]["anio_actual"] ?></h4>
 		
-		<?php  
-
-			foreach ($info_estudiante as $fila) {
-		
-				$nombres = utf8_encode($fila['nombres']);
-				$apellidos = utf8_encode($fila['apellidos']);
-				$id_ci = $fila['id_ci'];
-
-
-
-				$salida = "<h3>".$nombres." ".$apellidos."<h3>";
-				$salida .= "<h4> CI: ".$id_ci."   Año actual: ".$fila['anio_actual']."</h4>";
-				echo $salida;
-			}
-
-			$salida = "";
-
-		?>
-
-
 	</div>
+
+
 
 	<div id="datos">
 
 		<div class="tabla_datos">  
-			<a href= index?page=nuevo_curricular&id_ci=<?php echo $id_ci?>>
-				<button class= 'btn succes' >
+			<a href=index.php?page=historial_academico&id=<?php echo $estudiante[0]["id_estudiante"] . "&new"; ?>>
+				<button class="btn succes">
 					Nuevo año/s 
 				</button> 
 			</a>
 		</div>
 
-		<?php  
 
-			$salida = "";			
-
-			$salida .= "<table class = 'tabla_datos' >
-							<thead>
-								<tr>
-									<td> Año </td>
-									<td> Seccion </td>
-									<td> Opciones </td>
-							</thead>
-							<tbody>
-				";		
+		<table class = 'tabla_datos' >
+				<thead>
+					<tr>
+						<td> Año </td>
+						<td> Seccion </td>
+						<td> Opciones </td>
+					</tr>
+				</thead>
+				<tbody>
 
 
-				foreach ($historial_academico as $fila) {
+					<?php foreach ($historial_academico as $fila): ?>
 
-
-					$salida .= "
-						<tr>
-						<td> 
-							<a href=index?page=mostrar_materias&anio=".$fila['anio'].">".$fila['anio']."</a>
+					<tr>
+						<td>
+							<a href=index.php?page=mostrar_materias&anio= <?php  echo $fila["anio"]; ?> ><?php echo $fila["anio"] ?></a>
 						</td>
-						<td>".$fila['seccion']."</td>
+							<?php echo $fila["seccion"];?>
+						<td>
+
+						<td>
+							<a href=""> Editar </a>	
+						</td>
+
+					</tr>
+
+					<?php endforeach ?>	
 
 
-						<td>"."Editar"."</td>
-
-						</tr>
-					"; 
-				}
-
-			$salida.= '</tbody></table>';
-
-			echo $salida;
-
-
-
-		?>
+				</tbody>
+		</table>
 
 		
 	</div>	

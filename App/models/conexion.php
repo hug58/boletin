@@ -3,16 +3,19 @@
 	class Connect{
 
 		private  static $host = "localhost";
-		private  static $name = "juan_bosco";
+		public  static $name = "db_juan_bosco";
 		private  static $user = "root";
-		private  static $password = "";
+		private  static $password = "Ilota@213";
 		private static $charset = "utf8";
 
 
 
 		public static function conectar(){
 			$mysqli = new mysqli(self::$host,self::$user,self::$password,self::$name);	
-			$mysqli->query("SET NAMES '".self::$charset)."'";
+
+
+			$result =$mysqli->query("SET NAMES '".self::$charset)."'";
+
 			return $mysqli;
 		}
 

@@ -2,9 +2,13 @@
 	
 	if (file_exists("../models/conexion.php")) {
 		require_once("../models/conexion.php");
+	
 	}
 	else{
+
+
 		require_once("App/models/conexion.php");
+		
 	}
 
 	class BaseModel {
@@ -14,7 +18,8 @@
 
 		function __construct($table){
 			$this->db= Connect::conectar();
-			$this->table = (string) $table;
+			$this->table = (string) Connect::$name.".".$table;
+			
 		}
 
 		public function get_all(){

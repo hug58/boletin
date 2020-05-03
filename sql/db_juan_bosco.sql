@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 13-03-2020 a las 10:30:44
+-- Tiempo de generación: 01-01-2002 a las 04:09:20
 -- Versión del servidor: 5.7.26
 -- Versión de PHP: 7.2.18
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `juan_bosco`
+-- Base de datos: `db_juan_bosco`
 --
 
 -- --------------------------------------------------------
@@ -30,21 +30,37 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `estudiante`;
 CREATE TABLE IF NOT EXISTS `estudiante` (
-  `id_ci` varchar(12) COLLATE utf8_bin NOT NULL,
-  `nombres` varchar(100) COLLATE utf8_bin NOT NULL,
-  `apellidos` varchar(100) COLLATE utf8_bin NOT NULL,
-  `anio_actual` varchar(12) COLLATE utf8_bin NOT NULL,
-  PRIMARY KEY (`id_ci`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `id_estudiante` int(11) NOT NULL AUTO_INCREMENT,
+  `ci` varchar(12) NOT NULL,
+  `nombres` varchar(100) NOT NULL,
+  `apellidos` varchar(100) NOT NULL,
+  `anio_actual` varchar(11) DEFAULT NULL,
+  `fecha_nacimiento` date DEFAULT NULL,
+  PRIMARY KEY (`id_estudiante`),
+  UNIQUE KEY `ci` (`ci`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `estudiante`
 --
 
-INSERT INTO `estudiante` (`id_ci`, `nombres`, `apellidos`, `anio_actual`) VALUES
-('', '', '', ''),
-('2766371', 'Rafael Jose', 'Amaya NosÃ©', '2B'),
-('27663719', 'Hugo Henrrique', 'Montañez Higuera', '1A');
+INSERT INTO `estudiante` (`id_estudiante`, `ci`, `nombres`, `apellidos`, `anio_actual`, `fecha_nacimiento`) VALUES
+(1, '27663719', 'Hugo Henrrique', 'Montañez Higuera', '2S', NULL),
+(2, '27722266', 'Rachuo', 'Data', '3S', NULL),
+(3, '312737876', 'Itachi', 'Uchiha', '5A', NULL),
+(4, '21369613', 'Die for', 'you', '2F', NULL),
+(5, '43234234', 'Do do ', 'for you', '3D', NULL),
+(6, '12321312312', 'The', 'Weeknd', '1A', NULL),
+(7, '12312312', 'Baby', 'Die', '7D', NULL),
+(8, '312312321', 'Check', 'shit', '5D', NULL),
+(9, '23123123123', 'Jon', 'Jota', '9D', NULL),
+(10, '2312321', 'La la ', 'land', '9D', NULL),
+(11, '32132123123', 'Melee', 'Smash', '0D', NULL),
+(12, '8088546', 'JULIAN MONSITO ', 'ARCOS', 'B2', NULL),
+(13, '7635979', 'IGNACIO', 'MARI TEJERA', 'B1', NULL),
+(14, '5946266', 'RAUL', 'DEL PINO DONOSO', 'C2', NULL),
+(15, '2704447', 'GONZALO', 'MANCEBO LORITE', 'D3', NULL),
+(16, '5512776', 'HECTOR LECHUGA', 'ZURITA', 'A1', NULL);
 
 -- --------------------------------------------------------
 
@@ -56,23 +72,13 @@ DROP TABLE IF EXISTS `materia`;
 CREATE TABLE IF NOT EXISTS `materia` (
   `id_curricular` int(11) NOT NULL,
   `id_materia` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(100) COLLATE utf8_bin NOT NULL,
+  `nombre` varchar(100) NOT NULL,
   `nota_1` int(11) NOT NULL DEFAULT '0',
   `nota_2` int(11) NOT NULL DEFAULT '0',
   `nota_3` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_materia`),
   KEY `id_curricular` (`id_curricular`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Volcado de datos para la tabla `materia`
---
-
-INSERT INTO `materia` (`id_curricular`, `id_materia`, `nombre`, `nota_1`, `nota_2`, `nota_3`) VALUES
-(1, 1, 'Programación', 20, 20, 20),
-(2, 2, 'Idiomas', 16, 3, 0),
-(1, 3, 'Redes', 18, 0, 0),
-(1, 4, 'Física ', 17, 0, 0);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -82,21 +88,20 @@ INSERT INTO `materia` (`id_curricular`, `id_materia`, `nombre`, `nota_1`, `nota_
 
 DROP TABLE IF EXISTS `unidad_curricular`;
 CREATE TABLE IF NOT EXISTS `unidad_curricular` (
-  `id_ci` varchar(12) COLLATE utf8_bin NOT NULL,
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_estudiante` int(11) NOT NULL,
   `anio` int(11) NOT NULL,
-  `seccion` varchar(3) COLLATE utf8_bin NOT NULL,
+  `seccion` varchar(12) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `id_ci` (`id_ci`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  KEY `id_estudiante` (`id_estudiante`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `unidad_curricular`
 --
 
-INSERT INTO `unidad_curricular` (`id_ci`, `id`, `anio`, `seccion`) VALUES
-('27663719', 1, 1, 'A'),
-('27663719', 2, 2, 'B');
+INSERT INTO `unidad_curricular` (`id`, `id_estudiante`, `anio`, `seccion`) VALUES
+(1, 1, 1, 'A');
 
 --
 -- Restricciones para tablas volcadas
@@ -112,7 +117,7 @@ ALTER TABLE `materia`
 -- Filtros para la tabla `unidad_curricular`
 --
 ALTER TABLE `unidad_curricular`
-  ADD CONSTRAINT `unidad_curricular_ibfk_1` FOREIGN KEY (`id_ci`) REFERENCES `estudiante` (`id_ci`);
+  ADD CONSTRAINT `unidad_curricular_ibfk_1` FOREIGN KEY (`id_estudiante`) REFERENCES `estudiante` (`id_estudiante`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
