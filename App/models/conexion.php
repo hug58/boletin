@@ -5,7 +5,7 @@
 		private  static $host = "localhost";
 		public  static $name = "db_juan_bosco";
 		private  static $user = "root";
-		private  static $password = "Ilota@213";
+		private  static $password = "";
 		private static $charset = "utf8";
 
 
