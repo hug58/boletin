@@ -31,7 +31,6 @@
 
 body{
 	background-color: #FCF4EC;
-	font-family: 'Poppins', sans-serif;
 }
 
 .form{
@@ -64,8 +63,11 @@ body{
 
 
 th, td {
-  border: solid 1px var(--gray-color);
+  border: solid 1px #000000;
   padding: 10px;
+  font-size:16px;
+  background-color: ghostwhite;
+  color: black;
 }
 
 

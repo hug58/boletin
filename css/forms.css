@@ -15,7 +15,7 @@
   }
 
     .form_student label{
-      font:19px 'roboto';
+      font-size:19px;
       margin-top:11px;
    }
 
@@ -45,7 +45,7 @@
 
 }
 
-    .form-reg input[type="text"]:required{
+    .form-reg input[type="text"]:required,select{
     background-color: rgba(255,255,255,0.0);
     margin-top: 50px;
     height: 25px;
@@ -60,15 +60,30 @@
 }
 
       .form-reg input[type="text"]:focus {
+       border-bottom-color:#f94242;
        transition: all 0.5s;
    }
 
+        .form-reg label{
+          text-align: left;
+          margin-top:40px;
+          margin-bottom: 15px;
+        }
+
+         .form-reg select{
+          margin-top:0px;
+          height: auto;
+         }
+
+          .form-reg select:focus{
+            border-bottom-color:#f94242;
+            transition:all 0.5s;
+          }
 
 
-
-
-
-
+input[type="text"]::placeholder{
+  color: black;
+}
 
 
 
@@ -86,21 +101,20 @@ display: table;
 }
 
 
-  #boton-confirmar,#boton-regresar{
+  #boton-confirmar,#boton-regresar,.buttons label{
     color:#F4F4F4FF;
     border-style: none;
     padding: 10px 44px;
     cursor: pointer;
     transition: 0.5s;
-    text-shadow: 0px 1px 2px black;
-    background-color: #00D074FF;
+    background-color: #03b566;
     margin:20px 20px;
+    font-size: 16px;
   }
 
 
     #boton-confirmar:hover{
-      background-color:#00EA69FF;
-      border-color: #0AFF90FF;
+      background-color:#009855;
       transition: 1s;
     }
 
@@ -131,3 +145,9 @@ display: table;
      text-shadow: none;
      transition: 0.1s;
     }
+
+
+.buttons label{
+background-color:#1b1b1b;
+padding: 7.95px 34px;
+}
