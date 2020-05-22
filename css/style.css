@@ -61,7 +61,8 @@ body{
 
 }
 
-    .bar-search input[type=text]{
+    .bar-search input[type=search]{
+      background-color: white;
       width: 100%;
       font-size: 15px;
       margin-right: 10px;

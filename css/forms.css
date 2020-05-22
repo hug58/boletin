@@ -133,15 +133,13 @@ display: table;
 
 
   #boton-regresar:hover{
-    background-color:#FE565FFF;
-    border-color:#FE565FFF;
+    background-color:#f93232;
     transition: 1s;
 
   }
 
 
     #boton-regresar:active{
-     background-color: #FF4753FF;
      text-shadow: none;
      transition: 0.1s;
     }

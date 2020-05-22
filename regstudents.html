@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
+  <title>Registro de Estudiates</title>
+  <link rel="icon" href="src/juanboscologo.jpg">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/alerts.js"></script>
 </head>
 <body>
   <h1 class="title">Registro de Estudiantes</h1>
@@ -16,10 +18,10 @@
                 <input class="reg-input" type="text" id="ci" name="ci" placeholder="Cedula del Alumno" pattern="[VveE1234567890.-]{1,900}" autocomplete="off" required>
 
 
-                <input class="reg-input" type="text" id="nombres" name="nombres" pattern="[A-Za-záéíóúñ'´ ]{1,900}" placeholder="Nombre del Alumno" autocomplete="off" title="Solo Caracteres Alfabeticos!" required>
+                <input class="reg-input" type="text" id="nombres" name="nombres" pattern="[A-Za-záéíóúñ'´ ]{1,900}" placeholder="Nombre Completo del Alumno" autocomplete="off" title="Solo Caracteres Alfabeticos!" required>
 
 
-                <input class="reg-input" type="text" id="apellidos" name="apellidos" placeholder="Cedula de Identidad" pattern="[VveE1234567890.-]{1,900}" title="Solo caracteres numericos" autocomplete="off" required>
+                <input class="reg-input" type="text" id="apellidos" name="apellidos" placeholder="Apellido Completo del Alumno" pattern="[VveE1234567890.-]{1,900}" title="Solo caracteres numericos" autocomplete="off" required>
 
                 <label for="anio_actual">Curso Actual:</label>
                 <select name="anio_actual" id="anio_actual">
@@ -42,9 +44,11 @@
             <br>
 
             <div class="buttons">
-                <label for="file"> Subir CSV </label>
-                <input style="visibility:collapse; display: none;" type="file" id="file" name="file" id="file">
+                <label id="labelFile" for="file"> Subir CSV </label>
+                <input style="visibility:collapse; display: none;" type="file" id="file" accept=".csv" name="file">
                 <input type="submit" id="boton-confirmar" name="">
+                <br>
+                <p id="msj" style="text-align: center; display: none;"></p>
             </div>
         </form>
     </section>
