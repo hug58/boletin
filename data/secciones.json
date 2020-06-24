@@ -1,0 +1,53 @@
+{
+		"1":[
+			"MATEMATICA",
+			"INGLES",
+			"GEOGRAFIA",
+			"HISTORIA",
+			"BIOLOGIA"
+		],
+		"2":[
+			"MATEMATICA",
+			"INGLES",
+			"GEOGRAFIA",
+			"HISTORIA",
+			"BIOLOGIA",
+			"HISTORIA UNIVERSAL",
+			"QUIMICA"			
+		],
+
+		"3":[
+			"MATEMATICA",
+			"INGLES",
+			"GEOGRAFIA",
+			"HISTORIA",
+			"BIOLOGIA",
+			"FISICA",
+			"QUIMICA"
+
+		],
+		"4":[
+			"MATEMATICA",
+			"INGLES",
+			"GEOGRAFIA",
+			"HISTORIA",
+			"BIOLOGIA",
+			"FISICA",
+			"QUIMICA",
+			"PRE-MILITAR"
+
+		],
+		"5":[
+			"MATEMATICA",
+			"INGLES",
+			"GEOGRAFIA",
+			"HISTORIA",
+			"BIOLOGIA",
+			"FISICA",
+			"QUIMICA",
+			"PRE-MILITAR"
+			
+		
+		]
+}
+

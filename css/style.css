@@ -1,128 +1,185 @@
-@import url('forms.css');
-@import url('styleh.css');
-@import url('fonts.css');
-@import url('login.css');
+@import url('mystyle.css');
+/* ---------VARIABLES----------- */
+
+:root{
+  /* ----------COLORES------- */
+  --white-color: #FCF4EC;
+  --blue-color:#007bff;
+  --gray-color:#DCDCDC;
+  
+
+
+  /*-------BORDER COLORS---- */
+  --blue-border:#007bff;
+
+
+  /*-------RED GET BACK---- */
+  --getback-color:#FC7C74;
+
+
+  /*-------COLOR-TITLE---- */
+  --color-title:#38aca0;
+
+  /* --------BOX SHADOW-------- */
+  --box:0px 0 10px 4px var(--border-white-color);
+}
+
+
+  /* ------------------------- */
+
+	@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+	
+
+
 body{
-  /*background-color: #007FFF;*/
-  /* background: rgb(51,118,241);
-  background: -moz-linear-gradient(173deg, rgba(51,118,241,1) 1%, rgba(76,225,255,1) 100%);
-  background: -webkit-linear-gradient(173deg, rgba(51,118,241,1) 1%, rgba(76,225,255,1) 100%);
-  background: linear-gradient(173deg, rgba(51,118,241,1) 1%, rgba(76,225,255,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3376f1",endColorstr="#4ce1ff",GradientType=1);*/
-  background: rgb(212,255,255);
-  background: -moz-linear-gradient(180deg, rgba(212,255,255,1) 1%, rgba(251,251,251,1) 100%);
-  background: -webkit-linear-gradient(180deg, rgba(212,255,255,1) 1%, rgba(251,251,251,1) 100%);
-  background: linear-gradient(180deg, rgba(212,255,255,1) 1%, rgba(251,251,251,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d4ffff",endColorstr="#fbfbfb",GradientType=1);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  margin:0;
-  font-family: 'opensans'
+	background-color: rgba(212,255,255,0.60);
+	font-family: 'Poppins', sans-serif;
 }
 
 
+/* --------FORMULARIOS ----------------- */
 
+input,button{
+  height: 35px;
+  border-radius: 24px;
+  outline: none;
 
-.title{
-  text-align:center;
-  margin-top: 70px;
-  color:#131313;
 }
 
+.box input, .box button{
+  width: 100%;
 
+}
 
+.box form input{
+  display: block;
+  margin: 20px auto;
+  border:0px;
+  text-align: center;
+  background: none;
+  border: 2px solid var(--blue-color);
+  
+  outline: none;
+}
 
-
-.banner{
+.box{
+  width: 400px;
+  padding: 40px;
   position: absolute;
-  top:0;
-  left:0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: solid 1px var(--gray-color);
+  text-align: center;
 }
 
-    .banner img{
-      width: 120px;
-      height: 110px;
-      border-radius: 50%;
-    }
-
-
-
-
-
-/*Barra de Busqueda*/
-.bar-search{
-  position: relative;
-  display: table;
-  margin-top: 80px;
-  margin-left: auto;
-  margin-right:auto;
-  width: 50%;
-
+.box  button{
+  border:none;
+  color: var(--blue-color);
+  background-color: var(--gray-color);
 }
 
-    .bar-search input[type=search]{
-      background-color: white;
-      width: 100%;
-      font-size: 15px;
-      margin-right: 10px;
-      padding-left: 20px;
-      padding-right: 5px;
-      border-radius: 100px;
-      border:1px solid white;
-      box-shadow: none;
-      outline: none;
-      background-image: url('../src/icons/search-solid.svg');
-      background-size: 15px;
-      background-repeat: no-repeat;
-      background-position: left;
-  }
-
-
-
-
-
-.boxs{
-margin-top:100px;
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: center;
-text-align: center;
+.box  button:hover{
+  background-color: var(--blue-color);
+  color: var(--white-color);
 }
 
-        .boxe{
-              width: 260px;
-              height: 300px;
-              margin: 5px 20px;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              background-color: #8ac9f3;
-              color: black;
-              transform: translateY(0%);
-              transition: all 0.6s;
-              border-radius: 20px;
-        }
 
-
-              .boxe:hover{
-                    background-color: #FEC156FF;
-                    transform: translateY(-10%);
-                    transition: all 0.6s;
-                 }
+/* --------H2----------------- */
 
 
 
-                       .boxe img{
-                           width: 80px;
-                           height: 80px;
-                         }
+h1,h2{
+  font-weight: 500;
+}
+
+/* --------END H2 ----------------- */
 
 
+/*
+form input, form textarea{
+display: block;    
+} 
+*/
 
+/* --------TABLAS ----------------- */
+
+
+.tabla_datos{
+	margin: auto;
+	width: 80%;
+	border-collapse: collapse;
+}
+
+#datos{
+	overflow-x:auto;
+}
+
+
+th, td {
+  border: solid 1px var(--gray-color);
+  padding: 10px;
+}
+
+
+thead{
+	background-color: var(--blue-color);
+  border: solid 2px var(--blue-border));
+	color: var(--white-color);
+}
 
 a{
-  text-decoration:none;
+  text-decoration: none;
+
+}
+
+
+ /* ------------BUTTONS--------------- */
+
+.btn{
+  border:none;
+  background-color: var(--blue-color);
+  padding: 10px;
+  margin-bottom:1%; 
+}
+
+.btn:hover{
+  color: var(--black-color);
+}
+
+.succes{
+  background-color: var(--gray-color);
+}
+.danger{
+  background-color: var
+
+
+  (
+  /*-------RED GET BACK---- */
+    --getback-color);
+}
+
+.danger a{
+  color: var(--white-color);
+
+}
+
+ /* ----------SEARCH--------------- */
+
+.search{
+  text-align: center;
+}
+
+
+.search input{
+  width: 40%;
+  height: 40px;
+  border: solid 1px black;
+
+  border: 1px dotted #999;
+    border-radius: 0;
+
+  -webkit-appearance: none;
+
+
 }

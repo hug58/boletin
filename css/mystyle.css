@@ -1,0 +1,214 @@
+header{
+	margin-top: 25px;
+}
+
+header h1{
+	text-align: center;
+}
+
+header .title-register{
+	margin-top: 70px;
+}
+
+.principal{
+	margin:55px auto;
+}
+
+.number-table{
+	display: inline-flex;
+}
+
+.tabla_datos_nav,.buttons-students{
+	text-align: right;
+	margin:auto;
+	width: 80%;
+}
+
+.buttons-students{
+	display: flex;
+    justify-content: space-between;
+	margin:5px auto;
+}
+
+.buttons-students a,.index-a{
+	padding: 10px 15px;
+	background-color: #e0e0e0;
+    text-decoration: none;
+	color: black;
+	border-radius: 500px;
+}
+
+.index-a{
+	
+}
+
+.box{
+	background-color: aliceblue;
+}
+
+.box form input[type="text"]::placeholder{
+	color:black;
+}
+
+
+
+/*Barra de Busqueda*/
+.bar-search{
+  position: relative;
+  display: table;
+  margin-top: -25px;
+  margin-left: auto;
+  margin-right:auto;
+  width: 50%;
+
+}
+
+    .bar-search input[type=search]{
+      background-color: white;
+      width: 100%;
+      font-size: 15px;
+      margin-right: 10px;
+      padding-left: 20px;
+      padding-right: 5px;
+      border-radius: 100px;
+      border:1px solid white;
+      box-shadow: none;
+      outline: none;
+      background-image: url('../src/icons/search-solid.svg');
+      background-size: 15px;
+      background-repeat: no-repeat;
+      background-position: left;
+  }
+
+/*Registro de Usuarios*/
+.form-users{
+	margin: auto;
+    justify-content: center;
+    display: flex;
+
+}
+
+.form-reg {
+    margin-top: -25px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+
+}
+.form-reg input{
+	border-radius: 0px;
+}
+    .form-reg input[type="text"],select{
+    background-color: rgba(255,255,255,0.0);
+    margin-top: 50px;
+    height: 25px;
+    font-size: 16px;
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #231f1f;
+    outline: none;
+    box-shadow: none;
+    transition: all 0.5s;
+}
+
+      .form-reg input[type="text"]:focus {
+       border-bottom-color:#f94242;
+       transition: all 0.5s;
+   }
+
+        .form-reg label{
+          text-align: left;
+          margin-top:40px;
+          margin-bottom: 15px;
+        }
+
+         .form-reg select{
+          margin-top:0px;
+          height: auto;
+         }
+
+          .form-reg select:focus{
+            border-bottom-color:#f94242;
+            transition:all 0.5s;
+          }
+
+
+input[type="text"]::placeholder{
+  color: black;
+}
+
+
+
+
+
+
+
+
+/*botones*/
+.buttons{
+position: relative;
+margin-left: auto;
+margin-right:auto;
+display: table;
+}
+
+
+  #boton-confirmar,#boton-regresar,.buttons label{
+    color:#F4F4F4FF;
+    border-style: none;
+    padding: 10px 44px;
+    cursor: pointer;
+    background-color: #03b566;
+    margin:20px 20px;
+    font-size: 16px;
+    border-radius: 0px;
+    height: auto;
+        transition: 0.5s ease-in-out;
+  }
+
+
+    #boton-confirmar:hover{
+      background-color:#009855;
+ 
+    }
+
+
+      #boton-confirmar:active{
+       text-shadow: none;
+    }
+
+
+#boton-regresar{
+   background-color: #FE4C4CFF;
+    padding: 10px 37px;
+
+}
+
+
+  #boton-regresar:hover{
+    background-color:#f93232;
+    transition: 1s;
+
+  }
+
+
+    #boton-regresar:active{
+     text-shadow: none;
+     transition: 0.1s;
+    }
+
+
+.buttons label{
+background-color:#1b1b1b;
+padding: 7.95px 34px;
+}
+
+
+table{
+	background-color: #fdfdfd;
+}
