@@ -1,4 +1,4 @@
-
+@import url('mystyle.css');
 /* ---------VARIABLES----------- */
 
 :root{
@@ -32,7 +32,7 @@
 
 
 body{
-	background-color: var(--white-color);
+	background-color: rgba(212,255,255,0.60);
 	font-family: 'Poppins', sans-serif;
 }
 
@@ -90,7 +90,6 @@ input,button{
 
 
 h1,h2{
-  text-transform: uppercase;
   font-weight: 500;
 }
 
