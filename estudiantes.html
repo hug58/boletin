@@ -4,19 +4,20 @@
 	
 	<title>Estudiantes</title>
 	<meta charset="utf-8">
-
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
 <body>
+	<header >
+		<h1>Busqueda de Estudiantes</h1>
+	</header>
 
 	<section class="principal">
-		<div class="search">
-			<h2> Buscar estudiante</h2>
-			<input type="search" name="caja_busqueda" id="caja_busqueda" placeholder="Nombre o CI">
-		</div>
-
-		<br>
+		<div class="bar-search">
+    <input type="search" name="caja_busqueda" id="caja_busqueda"  placeholder="Introduzca aqui la cedula del estudiante o el nombre del mismo para buscar"/>
+</div>
+<br>
 
 		<div id="datos">
 			
@@ -24,15 +25,17 @@
 
 	</section>
 
+<div class="buttons-students" style="margin-top:-50px;">
+<a class ="index-a" href="index">Regresar</a>
+</div>
+		
+
 
 	<script
   		src="https://code.jquery.com/jquery-3.4.1.js"
 		  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   		crossorigin="anonymous"></script>
-
-
-	<!---script type="text/javascript" src="js/jquery.min.js"></script>
-	-->
+	
 	<script type="text/javascript" src="js/main.js"></script>
 
 </body>
